@@ -17,7 +17,7 @@ var main = function() {
 			handler = new DustHandler({
 				logger : logger,
 				eb : eb,
-			// version : config.version ? config.version : "2.0.3"
+			    version : config.version ? config.version : "2.0.3"
 			});
 		}
 	} catch (e) {

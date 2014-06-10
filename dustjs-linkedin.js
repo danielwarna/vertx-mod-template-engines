@@ -71,8 +71,8 @@ function DustHandler(options) {
 		var patch = file.readFileSync("dustjs-linkedin/patch.js");
 		var src = file.readFileSync(dustPath + "dist/dust-full-" + version
 				+ ".js");
-		var srcNew = new Buffer(src.toString().replace("function getGlobal",
-				patch + "function getGlobalOld"));
+		var srcNew = src.toString().replace("function getGlobal",
+				patch + "function getGlobalOld");
 
 		if (file.existsSync(patchFile)
 				&& srcNew.equals(file.readFileSync(patchFile))) {
